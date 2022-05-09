@@ -1,5 +1,5 @@
 """ MN easy/hard
-puts code created in v2 into a loop to make testing easier and more
+puts code created in v3 into a function to make testing easier and more
 efficient.
 """
 
