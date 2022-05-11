@@ -6,7 +6,7 @@ incorporates both easy/hard and shows instructions"""
 def easy_hard(question_text):
     while True:
 
-        # ask user if they've played before
+        # ask user if they would like to play easy or hard mode
         answer = input(question_text).lower()
 
         # if they say easy, output 'display instructions'
@@ -14,7 +14,7 @@ def easy_hard(question_text):
             answer = "Easy"
             return answer
 
-        # if they say hard, output 'display instructions'
+        # if they say hard, output 'display other instructions'
         elif answer == "hard" or answer == "h":
             answer = "Hard"
             return answer
@@ -25,7 +25,7 @@ def easy_hard(question_text):
 
 
 # function to display instructions
-def instructions_1():
+def easy_instructions():
     print("**** How to play *****")
     print()
     print("the rules of the game will go here")
@@ -35,7 +35,7 @@ def instructions_1():
 
 
 # function to display instructions
-def instructions_2():
+def hard_instructions():
     print("***** How to play *****")
     print()
     print("the rules of the game will go here")
@@ -48,7 +48,12 @@ def instructions_2():
 challenge_level = easy_hard("Would you like to play easy or hard mode? ")
 
 if challenge_level == "easy":
-    instructions_1()
+    print(f"You chose '{challenge_level}' mode")
+    easy_instructions()
+
+elif challenge_level == "hard":
+    print(f"You chose '{challenge_level}' mode")
+    hard_instructions()
 
 else:
     print("program continues")
