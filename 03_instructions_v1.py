@@ -27,22 +27,31 @@ def easy_hard(question_text):
 # function to display instructions
 def easy_instructions():
     print()
-    print("**** How to play *****")
+    print("**** How to play easy mode *****")
     print()
-    print("the rules of the game will go here")
+    print("The numbers one through"
+          "ten will be given to you"
+          "in Maori at random and "
+          "you are to input the "
+          "correct translation in "
+          "english.")
     print()
-    print("program continues")
+    print("********************************")
     print()
 
 
 # function to display instructions
 def hard_instructions():
     print()
-    print("***** How to play *****")
+    print("***** How to play hard mode *****")
     print()
-    print("the rules of the game will go here")
+    print("You will be given all of the "
+          "multiples of ten between one"
+          "and one hundred and a few multiples "
+          "of five in Maori at random and have to "
+          "input the correct english translation")
     print()
-    print("program continues")
+    print("**********************************")
     print()
 
 
