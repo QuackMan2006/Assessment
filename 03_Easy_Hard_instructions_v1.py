@@ -1,5 +1,6 @@
 """ Took function from component 03_v1 as the basis for this new function which
-incorporates both easy/hard and shows instructions"""
+incorporates both easy/hard and shows instructions for
+how to play each game mode"""
 
 
 # functions go here...
@@ -29,12 +30,11 @@ def easy_instructions():
     print()
     print("**** How to play easy mode *****")
     print()
-    print("The numbers one through"
-          "ten will be given to you"
-          "in Maori at random and "
-          "you are to input the "
-          "correct translation in "
-          "english.")
+    print("The numbers one through")
+    print("ten will be given to you")
+    print("in Maori at random and you ")
+    print("must input the correct")
+    print("translation in english ")
     print()
     print("********************************")
     print()
@@ -45,11 +45,11 @@ def hard_instructions():
     print()
     print("***** How to play hard mode *****")
     print()
-    print("You will be given all of the "
-          "multiples of ten between one"
-          "and one hundred and a few multiples "
-          "of five in Maori at random and have to "
-          "input the correct english translation")
+    print("You will be given all of the ")
+    print("multiples of ten between one")
+    print("and one hundred and a few multiples ")
+    print("of five in Maori at random and have to ")
+    print("input the correct english translation")
     print()
     print("**********************************")
     print()
