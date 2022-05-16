@@ -26,6 +26,7 @@ def easy_hard(question_text):
 
 # function to display instructions
 def easy_instructions():
+    print()
     print("**** How to play *****")
     print()
     print("the rules of the game will go here")
@@ -36,6 +37,7 @@ def easy_instructions():
 
 # function to display instructions
 def hard_instructions():
+    print()
     print("***** How to play *****")
     print()
     print("the rules of the game will go here")
@@ -47,11 +49,11 @@ def hard_instructions():
 # main routine go here...
 challenge_level = easy_hard("Would you like to play easy or hard mode? ")
 
-if challenge_level == "easy":
+if challenge_level == "Easy":
     print(f"You chose '{challenge_level}' mode")
     easy_instructions()
 
-elif challenge_level == "hard":
+elif challenge_level == "Hard":
     print(f"You chose '{challenge_level}' mode")
     hard_instructions()
 
