@@ -1,5 +1,6 @@
-"""Version one of easy gameplay works but can definitely be improved
-so that it is easier and more efficient to use"""
+"""Version two of easy gameplay makes sure that the program keeps
+asking you questions until each question is done once.
+it uses 'pop' to do this."""
 
 import random
 
