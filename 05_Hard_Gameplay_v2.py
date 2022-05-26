@@ -1,4 +1,4 @@
-"""Version two of easy gameplay makes sure that the program keeps
+"""Version two of hard gameplay makes sure that the program keeps
 asking you questions until each maori number is done once.
 it uses 'pop' to do this."""
 
@@ -7,15 +7,14 @@ import random
 # This code puts the maori word and correct translation into lists
 
 # 1st list (maori word)
-Maori = ["tahi", "rua", "toru", "wha", "rima", "ono", "whitu",
-         "waru", "iwa", "tekau"]
+Maori = ["tekau", "rua tekau", "toru tekau", "wha tekau", "rima tekau", "ono tekau", "whitu tekau",
+         "waru tekau", "iwa tekau", "kotahi rau"]
 # 2nd list
-English = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+English = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"]
 
 
 quiz = Maori.copy()
 random.shuffle(quiz)
-
 
 while len(quiz) > 0:
 
