@@ -1,23 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+"""My final code takes all the pieces and puts the together and adds some code
+ so that the game flows on and works properly."""
 
 
 def easy_hard(question_text):
@@ -84,3 +66,68 @@ elif challenge_level == "Hard":
 
 else:
     print("program continues")
+
+# Easy mode code
+import random
+
+# This code puts the maori word and correct translation into lists
+
+# 1st list (maori word)
+Maori = ["tahi", "rua", "toru", "wha", "rima", "ono", "whitu",
+         "waru", "iwa", "tekau"]
+# 2nd list
+English = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+
+
+quiz = Maori.copy()
+random.shuffle(quiz)
+
+
+while len(quiz) > 0:
+
+    question = quiz.pop()
+    attempt = input(f"What number is this: {question}? ")
+    # This uses indexing to find the corresponding number for Maori word
+    # index position of answer
+    if question in Maori:
+        answer_index = Maori.index(question)
+        answer = English[answer_index]
+
+    if attempt == answer:
+        print("##### CORRECT! #####\n")
+
+    else:
+        print(f"Wrong, the correct answer was {answer}")
+
+
+
+# Hard mode code
+import random
+
+# This code puts the maori word and correct translation into lists
+
+# 1st list (maori word)
+Maori_h = ["tekau", "rua tekau", "toru tekau", "wha tekau", "rima tekau", "ono tekau", "whitu tekau",
+         "waru tekau", "iwa tekau", "kotahi rau"]
+# 2nd list
+English_h = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"]
+
+
+quiz = Maori_h.copy()
+random.shuffle(quiz)
+
+while len(quiz) > 0:
+
+    question = quiz.pop()
+    attempt = input(f"What number is this: {question}? ")
+    # This uses indexing to find the corresponding number for Maori word
+    # index position of answer
+    if question in Maori_h:
+        answer_index = Maori_h.index(question)
+        answer = English_h[answer_index]
+
+    if attempt == answer:
+        print("##### CORRECT! #####\n")
+
+    else:
+        print(f"Wrong, the correct answer was {answer}")
