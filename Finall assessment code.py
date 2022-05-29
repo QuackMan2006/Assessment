@@ -1,5 +1,6 @@
 """My final code takes all the pieces and puts the together and adds some code
- so that the game flows on and works properly."""
+so that the game flows on and works properly."""
+import random
 
 
 def easy_hard(question_text):
@@ -11,12 +12,12 @@ def easy_hard(question_text):
         # if they say easy, output 'display instructions'
         if answer == "easy" or answer == "e":
             answer = "Easy"
-            return answer
+            return "e"
 
         # if they say hard, output 'display other instructions'
         elif answer == "hard" or answer == "h":
             answer = "Hard"
-            return answer
+            return "h"
 
         # otherwise - show error
         else:
@@ -56,32 +57,32 @@ def hard_instructions():
 # main routine go here...
 challenge_level = easy_hard("Would you like to play easy or hard mode? ")
 
-if challenge_level == "Easy":
+if challenge_level == "e":
     print(f"You chose '{challenge_level}' mode")
     easy_instructions()
+    # This code puts the maori word and correct translation into lists
+    # 1st list (maori word)
+    Maori = ["tahi", "rua", "toru", "wha", "rima", "ono", "whitu",
+             "waru", "iwa", "tekau"]
+    # 2nd list
+    English = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
-elif challenge_level == "Hard":
-    print(f"You chose '{challenge_level}' mode")
-    hard_instructions()
 
 else:
-    print("program continues")
+    print(f"You chose '{challenge_level}' mode")
+    hard_instructions()
+    # This code puts the maori word and correct translation into lists
 
-# Easy mode code
-import random
-
-# This code puts the maori word and correct translation into lists
-
-# 1st list (maori word)
-Maori = ["tahi", "rua", "toru", "wha", "rima", "ono", "whitu",
-         "waru", "iwa", "tekau"]
-# 2nd list
-English = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    # 1st list (maori word)
+    Maori = ["tekau", "rua tekau", "toru tekau", "wha tekau", "rima tekau", "ono tekau", "whitu tekau",
+             "waru tekau", "iwa tekau", "kotahi rau"]
+    # 2nd list
+    English = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"]
 
 
 quiz = Maori.copy()
 random.shuffle(quiz)
-
+score = 0
 
 while len(quiz) > 0:
 
@@ -95,39 +96,10 @@ while len(quiz) > 0:
 
     if attempt == answer:
         print("##### CORRECT! #####\n")
+        score += 1
 
     else:
         print(f"Wrong, the correct answer was {answer}")
 
 
-
-# Hard mode code
-import random
-
-# This code puts the maori word and correct translation into lists
-
-# 1st list (maori word)
-Maori_h = ["tekau", "rua tekau", "toru tekau", "wha tekau", "rima tekau", "ono tekau", "whitu tekau",
-         "waru tekau", "iwa tekau", "kotahi rau"]
-# 2nd list
-English_h = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"]
-
-
-quiz = Maori_h.copy()
-random.shuffle(quiz)
-
-while len(quiz) > 0:
-
-    question = quiz.pop()
-    attempt = input(f"What number is this: {question}? ")
-    # This uses indexing to find the corresponding number for Maori word
-    # index position of answer
-    if question in Maori_h:
-        answer_index = Maori_h.index(question)
-        answer = English_h[answer_index]
-
-    if attempt == answer:
-        print("##### CORRECT! #####\n")
-
-    else:
-        print(f"Wrong, the correct answer was {answer}")
+print(f"Good effort. You scored {score} out of 10")
